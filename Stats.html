@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoCure - Health Stats and Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #e91e63;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .page-header {
+            background-color: #e91e63;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .stats-section, .recommendations {
+            padding: 40px 0;
+        }
+        .recommendations h2, .stats-section h2 {
+            margin-bottom: 20px;
+        }
+        .stat-box, .recommendation-box {
+            background-color: #fff;
+            border-radius: 0.25rem;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background-color: #e91e63;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">OncoCure</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Work.html">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="simu.html">Personalize Your Treatment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Stats.html">Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="page-header">
+        <h1>Your Health Stats and Recommendations</h1>
+        <p>Personalized insights and recommendations based on your health data</p>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3>Current Health Status</h3>
+                        <p><strong>Blood Pressure:</strong> 120/80 mmHg</p>
+                        <p><strong>Heart Rate:</strong> 72 bpm</p>
+                        <p><strong>Weight:</strong> 70 kg</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3>Recent Test Results</h3>
+                        <p><strong>Blood Glucose:</strong> 90 mg/dL</p>
+                        <p><strong>Cholesterol:</strong> 180 mg/dL</p>
+                        <p><strong>Oxygen Saturation:</strong> 98%</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <h3>Progress Overview</h3>
+                        <p><strong>Weight Loss:</strong> 2 kg in the last month</p>
+                        <p><strong>Blood Pressure Improvement:</strong> -5 mmHg</p>
+                        <p><strong>Exercise Consistency:</strong> 4 days per week</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Chart -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="chart-container">
+                        <canvas id="healthChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="recommendations">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="recommendation-box">
+                        <h2>Daily Healthy Routine</h2>
+                        <ul>
+                            <li>Start your day with a glass of water and a balanced breakfast.</li>
+                            <li>Engage in at least 30 minutes of physical activity.</li>
+                            <li>Monitor your blood glucose levels regularly.</li>
+                            <li>Eat a diet rich in fruits, vegetables, and lean proteins.</li>
+                            <li>Aim for 7-8 hours of sleep each night.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="recommendation-box">
+                        <h2>Continuous Therapy</h2>
+                        <ul>
+                            <li>Follow the prescribed medication regimen.</li>
+                            <li>Attend scheduled follow-up appointments.</li>
+                            <li>Track your symptoms and report any changes to your healthcare provider.</li>
+                            <li>Adhere to recommended lifestyle changes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 OncoCure. Empowering personalized cancer treatment.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Chart.js example
+        var ctx = document.getElementById('healthChart').getContext('2d');
+        var healthChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Weight (kg)',
+                    data: [70, 68, 66, 64, 62, 60],
+                    borderColor: '#ff4081',
+                    backgroundColor: 'rgba(255, 64, 129, 0.2)',
+                    fill: true
+                },
+                {
+                    label: 'Blood Pressure (mmHg)',
+                    data: [120, 118, 116, 115, 114, 113],
+                    borderColor: '#ff80ab',
+                    backgroundColor: 'rgba(255, 128, 171, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

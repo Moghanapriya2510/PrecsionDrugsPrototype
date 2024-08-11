@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OncoCure - Your Personalized Cancer Treatment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background-color: #e91e63;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+        .header-section {
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #e91e63;
+            position: relative;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        .header-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.5s ease-out;
+            z-index: 2;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        .header-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease-out;
+            z-index: 2;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        .header-section .btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff4081;
+            border: none;
+            animation: fadeIn 2s ease-in-out;
+            z-index: 2;
+        }
+        .header-section .btn:hover {
+            background-color: #ff80ab;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .cancer-cells {
+            width: 50px;
+            height: 50px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: absolute;
+            animation: cancerCellsAnimation 3s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        .cancer-cell-1 { top: 10%; left: 5%; animation-delay: 0.5s; }
+        .cancer-cell-2 { top: 30%; left: 85%; animation-delay: 1s; }
+        .cancer-cell-3 { top: 60%; left: 20%; animation-delay: 1.5s; }
+        .cancer-cell-4 { top: 80%; left: 70%; animation-delay: 2s; }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes cancerCellsAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .header-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 64, 129, 0.6) 25%, rgba(233, 30, 99, 0.6) 75%);
+            clip-path: circle(30% at 50% 50%);
+            animation: morph 8s infinite ease-in-out;
+            z-index: 1;
+        }
+        @keyframes morph {
+            0% { clip-path: circle(30% at 50% 50%); }
+            50% { clip-path: circle(70% at 70% 40%); }
+            100% { clip-path: circle(30% at 50% 50%); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">OncoCure</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Work.html">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="simu.html">Personalize Your Treatment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Stats.html">Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="header-animation"></div>
+        <div class="container text-center">
+            <h1>Welcome to OncoCure</h1>
+            <p>Your Journey to Personalized Cancer Treatment Begins Here</p>
+            <a href="ExploreOurTechnology.html" class="btn btn-lg">Explore Our Technology</a>
+        </div>
+
+        <!-- Animated Cancer Cells -->
+        <div class="cancer-cells cancer-cell-1"></div>
+        <div class="cancer-cells cancer-cell-2"></div>
+        <div class="cancer-cells cancer-cell-3"></div>
+        <div class="cancer-cells cancer-cell-4"></div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-dna fa-3x"></i>
+                        <h4>Genetic Profiling</h4>
+                        <p>Unlock the secrets of your DNA to receive treatments tailored just for you.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-pills fa-3x"></i>
+                        <h4>Targeted Therapy</h4>
+                        <p>Precise medications that attack cancer cells while sparing healthy ones.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <i class="fas fa-heartbeat fa-3x"></i>
+                        <h4>Continuous Monitoring</h4>
+                        <p>Track your progress and adjust treatments in real-time for the best outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 OncoCure. Empowering personalized cancer treatment.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
+
+
